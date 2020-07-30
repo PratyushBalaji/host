@@ -1,0 +1,37 @@
+
+<html>
+    <head>
+        <style>
+            canvas{
+                border:15px solid #000000;
+                background-color: #bad9fa;
+            }
+        </style>
+        <body onload="startGame()">
+            <script type="text/javascript">
+                function startGame(){
+                    gameArea.start();
+                }
+
+                var gamearea = {
+                    canvas:document.createElement("canvas"),
+                    start:function(){
+                        this.canvas.height=500;
+                        this.canvas.widtch=1200;
+                        document.body.insertBefore(this.canvas,document.body.childNodes[0]);
+                        this.context=this.canvas.getContext("2d");
+                    },
+                    updateGameAre:function(){
+
+                    },
+                    clear:function(){
+                        gamearea.context.clearRect(0,0,this.canvas.width, this.canvas.height);
+                    },
+                    stop:function(){
+
+                    }
+                }
+            </script>
+        </body>
+    </head>
+</html>
